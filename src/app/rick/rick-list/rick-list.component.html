@@ -1,0 +1,12 @@
+<div class="row">
+    <div *ngFor="let rick of listRick$ | async; index as i" class="col-lg-3 mb-2">
+      <div class="card" style="width: 18rem;">
+        <img src="{{urlSpriteFront}}/{{i+1}}.jpeg" class="card-img-top" alt="{{rick.name}}">
+        <div class="card-body">
+          <h5 class="card-title">Nome: {{rick.name }}</h5>
+
+          <a routerLink="/rick/{{rick.id}}" class="btn btn-primary">Detalhes</a>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+<form action="">
+    <label for="uf"
+      >Sigla da Unidade Federativa
+      <select (change)="loadMunicipiosByUF($event)" name="uf" id="uf">
+        <option value="">Selecione</option>
+        <option *ngFor="let uf of ufs" value="{{ uf }}">{{ uf }}</option>
+      </select>
+    </label>
+    <br />
+  
+    <label for="cidades"
+      >Cidades
+      <select (change)="loadMunicipio($event)"  name="cidades" id="cidades">
+        <option value="">Selecione...</option>
+        <option *ngFor="let cidade of cidades$ | async" value="{{ cidade.id }}">
+          {{ cidade.nome }}
+        </option>
+      </select>
+    </label>
+  
+    <div *ngIf="cidadeObj"  class="col-sm-10">
+      <div class="col-sm-10">Nome: {{ cidadeObj.nome }}</div>
+      <div class="col-sm-10">Id: {{ cidadeObj.id }}</div>
+      <div class="col-sm-10">Microrregião: {{ cidadeObj.microrregiao?.nome }}</div>
+      <div class="col-sm-10">Microrregião Id: {{ cidadeObj.microrregiao?.id }}</div>
+      <div class="col-sm-10">Mesorregião: {{ cidadeObj.microrregiao?.mesorregiao?.nome }}</div>
+  
+  
+    </div>
+  
+  
+  </form>
+  

@@ -1,0 +1,51 @@
+<p>rick-detail works!</p>
+
+<section id="imagens">
+    <fieldset>
+      <legend>{{ rickObj.name | uppercase }}</legend>
+      <div class="row">
+        <div class="card col-lg-4">
+          <img src="{{urlSpriteFront}}/{{rickObj.id}}.jpeg" class="card-img-top" alt="{{rickObj.name}}">
+        </div>
+      </div>
+    </fieldset>
+  </section>
+  
+  <hr />
+  
+  <section id="dados-basicos">
+    <div class="row">
+      <div class="col-lg-1">
+        <label>Status</label>
+      </div>
+      <div class="col-lg-2">
+        <b>{{ rickObj.status }}</b>
+      </div>
+      <div class="col-lg-1">
+        <label style="font-size: 12px">Species</label>
+      </div>
+      <div class="col-lg-2">
+        <b>{{ rickObj.species }}</b>
+      </div>
+      <div class="col-lg-1">
+          <label style="font-size: 12px">Gender</label>
+        </div>
+        <div class="col-lg-2">
+          <b>{{ rickObj.gender }}</b>
+        </div>
+    </div>
+  </section>
+  
+  <hr />
+  
+  <!-- <section id="abilities">
+    <div class="row">
+      <div *ngFor="let ability of pokemonObj.abilities" class="col-lg-4">
+        <span class="badge rounded-pill bg-info">{{ ability.slot }}</span>
+        <span class="text-danger col-lg-1">{{ ability.ability?.name }}</span>
+        <br />
+        <span class="text-primary col-lg-1">{{ ability.ability?.url }}</span>
+      </div>
+    </div>
+  </section> -->
+  

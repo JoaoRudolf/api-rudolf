@@ -1,0 +1,105 @@
+<div class="container">
+    <!-- <div class="alert alert-success" role="alert">CNPJ DIGITADO: {{ cnpj }}</div> -->
+  
+     <h3>Digite os números do CNPJ e pressione tab para obter as informações da empresa</h3>
+  
+    <div class="form-group row">
+      <label for="cnpj" class="col-sm-2 col-form-label">CNPJ</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          (blur)="getEmpresa($event)"
+          class="form-control"
+          name="cnpj"
+        />
+      </div>
+    </div>
+  
+    <div *ngIf="showForm | async" name="retornoCEP">
+        <div class="form-group row">
+          <label for="numero" class="col-sm-2 col-form-label">Razão Social</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="razao_social" [(ngModel)]="formEmpresa.razao_social">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="numero" class="col-sm-2 col-form-label">Bairro</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="bairro" [(ngModel)]="formEmpresa.bairro">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="numero" class="col-sm-2 col-form-label">Municipio</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="municipio" [(ngModel)]="formEmpresa.municipio">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="numero" class="col-sm-2 col-form-label">UF</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="uf" [(ngModel)]="formEmpresa.uf">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="numero" class="col-sm-2 col-form-label">Telefone</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="telefone" [(ngModel)]="formEmpresa.ddd_telefone_1">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="numero" class="col-sm-2 col-form-label">Natureza Jurídica</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="natureza" [(ngModel)]="formEmpresa.natureza_juridica">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="numero" class="col-sm-2 col-form-label">CNAE Fiscal</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="natureza" [(ngModel)]="formEmpresa.cnae_fiscal_descricao">
+          </div>
+        </div>
+    </div>
+  
+  
+    <!-- <button type="button" class="btn btn-primary" (click)="pesquisar()">
+      Pesquisar
+    </button> -->
+  
+    <!-- <div class="form-group row">
+          <label for="bairro" class="col-sm-2 col-form-label">Bairro</label>
+          <div class="col-sm-10">
+              <input type="text" class="form-control" id="bairro">
+          </div>
+      </div> -->
+  
+    <!-- <div class="row">
+      <div class="col-lg-4 mb-2">
+        <div class="card" style="width: 18rem">
+          <div class="card-body">
+            <h5 class="card-title">{{ cnpj}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <label for="cidades">Cidades
+      <select name="cidades" id="cidades">
+        <option value="">Selecione...</option>
+        <option *ngFor="let cidade of cidades$ | async" value="{{cidade.cnpj}}">{{cidade.nome}} </option>
+      </select>
+    </label> -->
+  
+    <!-- <div class="form-group row">
+      <label for="numero" class="col-sm-2 col-form-label">Bairro</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="nome" [(ngModel)]="empresa$.bairro">
+      </div>
+    </div> -->
+  </div>
+  

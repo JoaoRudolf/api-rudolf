@@ -1,0 +1,12 @@
+<p>fornecedores-list works! 2</p>
+
+<div class="row">
+    <div *ngFor="let fornecedor of listFornecedores$ | async; index as i" class="col-lg-4 mb-2">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <!-- <h5 class="card-title">{{fornecedor.title | uppercase}}</h5> -->
+          <!-- <a routerLink="/pokemon/{{pokemon.name}}" class="btn btn-primary">Detalhes</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
